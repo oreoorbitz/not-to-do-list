@@ -1,0 +1,127 @@
+/* style guide
+classes for containers are named as:
+semanticHtml_specific-description-of-container
+items are named as semanticHtmlOfParrent_descriptionOfParentIfAviable-item-type
+
+overrides and utility styles are named as -red-text
+*/
+
+// colors
+$grey: #5B6057;
+$off-white: #f9f9f9;
+$red: #AF3800;
+$blue: #00FFE7;
+$yellow: #F7B538;
+//screen sizing
+$l: 1000px;
+
+// font settings
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+}
+
+//
+.section_centered {
+  width: 100%;
+  background-color: $grey;
+  padding: 10px;
+  @media (min-width: $l) {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+.header_header {
+  text-align: center;
+  color: $off-white;
+  -webkit-text-stroke: 1px black;
+
+  @media (min-width: $l) {
+    font-size: 2rem;
+
+  }
+}
+
+.header_sub-text {
+  text-align: center;
+  @media (min-width: $l) {
+    font-size: 1.4rem;
+  }
+}
+
+.unorderedList_not-to-do-list {
+  background-color: white;
+  padding: 5px;
+  margin-top: 1rem;
+}
+.unorderedList_not-to-do-list-list-item {
+  display: grid;
+  justify-content: space-around;
+      grid-template-columns: 33% 33% 33%;
+      align-items: center;
+      justify-items: center;
+}
+.unorderedList_nottoNotDoList-title {
+  font-size: 1rem;
+  widtH: 100%;
+  max-width: 100%;
+   overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ListItem_listItem-state-message {
+   widtH: 100%;
+  max-width: 100%;
+}
+
+.ListItem_listItem-button {
+  border-raduis: 10rem;
+  box-shadow: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 10%;
+  cursor: pointer;
+  &[aria-pressed="false"] {
+    background-color: red;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.section_add-to-do-section {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.section_addtoNotDoSection-input js-input {
+  margin-right: 0.5rem;
+}
+.section_addtoNotDoSection-button {
+  background-color: $blue;
+  border: none;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+  font-weight: 700;
+  padding: 0.5rem;
+    transition: all 1s;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+// utility styles and overreides
+.text-red {
+  color: $red;
+}
+
+.danger {
+  background-color: $red;
+  transition: all 1s;
+}
