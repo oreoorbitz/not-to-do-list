@@ -61,7 +61,7 @@ p {
 .unorderedList_not-to-do-list-list-item {
   display: grid;
   justify-content: space-around;
-      grid-template-columns: 33% 33% 33%;
+      grid-template-columns: 50% 50%;
       align-items: center;
       justify-items: center;
 }
@@ -71,6 +71,11 @@ p {
   max-width: 100%;
    overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.title-input {
+  width: 100%;
+  padding: 10px;
 }
 
 .ListItem_listItem-state-message {
@@ -83,6 +88,7 @@ p {
   box-shadow: none;
   border: none;
   font-size: 1rem;
+
   font-weight: 700;
   width: 10%;
   cursor: pointer;
